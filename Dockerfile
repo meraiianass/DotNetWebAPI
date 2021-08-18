@@ -1,4 +1,4 @@
 FROM mcr.microsoft.com/dotnet/aspnet:5.0
-COPY *.csproj App/
+COPY WebAPI/*.csproj App/
 WORKDIR /App
 ENTRYPOINT ["dotnet", "WebAPI.dll"]
