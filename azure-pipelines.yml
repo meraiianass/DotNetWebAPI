@@ -29,18 +29,6 @@ steps:
     configuration: '$(buildConfiguration)'
 
 
-- task: Docker@0
-  displayName: 'Build an image'
-  inputs:
-    azureSubscription: 'Visual Studio-MariemKh-002 (94ca701a-2c78-4bd5-b0df-6785d65fc462)'
-    azureContainerRegistry: '{"loginServer":"webapplicationdemo12.azurecr.io", "id" : "/subscriptions/94ca701a-2c78-4bd5-b0df-6785d65fc462/resourceGroups/MeraiAnassRG/providers/Microsoft.ContainerRegistry/registries/WebApplicationDemo12"}'
-
-- task: Docker@0
-  displayName: 'Push an image'
-  inputs:
-    azureSubscription: 'Visual Studio-MariemKh-002 (94ca701a-2c78-4bd5-b0df-6785d65fc462)'
-    azureContainerRegistry: '{"loginServer":"webapplicationdemo12.azurecr.io", "id" : "/subscriptions/94ca701a-2c78-4bd5-b0df-6785d65fc462/resourceGroups/MeraiAnassRG/providers/Microsoft.ContainerRegistry/registries/WebApplicationDemo12"}'
-    action: 'Push an image'
 - task: VSTest@2
   inputs:
     platform: '$(buildPlatform)'
