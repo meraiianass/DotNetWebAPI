@@ -8,7 +8,7 @@ RUN dotnet restore
 # Copy everything else and build
 COPY WebAPI/.. ./
 RUN dotnet publish -c Release -o out
-RUN mkdir -p /app/Photos
+
 
 # Build runtime image
 FROM mcr.microsoft.com/dotnet/aspnet:3.1
